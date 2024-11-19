@@ -1,100 +1,109 @@
-import Image from "next/image";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="items-center justify-items-center font-[family-name:var(--font-geist-sans)]">
+      <header className="bg-green-500 h-20 w-full">
+        <h1 className="text-4xl p-4 text-slate-200 font-bold text-center">
+          Ecoponto em Suzano
+        </h1>
+      </header>
+      <main className="flex flex-col gap-6 row-start-2 items-center justify-center p-4 pt-8">
+        <h1 className="font-extrabold text-3xl mb-4 text-green-950 text-center">
+          Encontre aqui o Ecoponto mais próximo a você em Suzano:
+        </h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        <Card className="w-3/4 bg-bg-green bg-opacity-50">
+          <CardHeader className="text-green-900">
+            <CardTitle>Ecoponto Dona Benta</CardTitle>
+            <CardDescription className="text-green-900 underline italic">
+              <a
+                href="https://maps.app.goo.gl/6KwNrvRTAAFUSoJN7"
+                target="_blank"
+              >
+                Endereço: Estrada Takashi Kobata, 183- Jardim Dona Benta
+              </a>
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="text-green-900">
+            <p>
+              Materiais recebidos: Resíduos da Construção Civil (até 1 m³/dia),
+              Móveis, Eletroeletrônicos, Resíduos de Poda e Jardinagem,
+              Recicláveis, Óleo de cozinha, Pilhas e Baterias.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card className="w-3/4 bg-bg-green bg-opacity-50">
+          <CardHeader>
+            <CardTitle className="text-green-900">Ecoponto Boa Vista</CardTitle>
+            <CardDescription className="text-green-900 underline italic">
+              <a
+                href="https://maps.app.goo.gl/pZCBfxPXZpemm3nX9"
+                target="_blank"
+              >
+                Endereço: Rua Vitor Miguelino, 553 – Boa Vista
+              </a>
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="text-green-900">
+            <p>
+              Materiais recebidos: Resíduos da Construção Civil (até 1 m³/dia),
+              Móveis, Eletroeletrônicos, Resíduos de Poda e Jardinagem e Pneus.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card className="w-3/4 bg-bg-green bg-opacity-50">
+          <CardHeader>
+            <CardTitle className="text-green-900">
+              Ecoponto Parque Maria Helena
+            </CardTitle>
+            <CardDescription className="text-green-900 underline italic">
+              <a
+                href="https://maps.app.goo.gl/VdD7BDQW4KF3v2Jn8"
+                target="_blank"
+              >
+                Endereço: Rua Antônio Francisco dos Santos, 186 – Parque Maria
+                Helena
+              </a>
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="text-green-900">
+            <p>
+              Materiais recebidos: Resíduos da Construção Civil (até 1 m³/dia),
+              Móveis, Eletroeletrônicos, Resíduos de Poda e Jardinagem,
+              Recicláveis, Óleo de cozinha, Pilhas e Baterias.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card className="w-3/4 bg-bg-green bg-opacity-20">
+          <CardHeader>
+            <CardTitle className="text-green-700 font-bold text-2xl">
+              Legenda
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-gray-700">
+            <ul>
+              <li>
+                Resíduos da construção civil: tábuas, tijolos, telhas,
+                tubulações, piso, lata de tinta vazia
+              </li>
+              <li>Poda e jardinagem: folhas e galhos</li>
+              <li>Recicláveis: papel, plástico, vidro, metal e isopor</li>
+            </ul>
+          </CardContent>
+        </Card>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer className=" flex row-start-3 flex-wrap justify-center mt-5 h-10 items-center  bg-green-500 opacity-80 w-full">
+        <p className="text-white font-semibold">Ecoponto©2024</p>
       </footer>
     </div>
   );
